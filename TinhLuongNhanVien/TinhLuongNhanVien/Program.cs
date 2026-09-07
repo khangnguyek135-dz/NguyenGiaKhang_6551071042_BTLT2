@@ -1,158 +1,62 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace TinhLuongNhanVien
 {
-    public class NhanVien
+    class Program
     {
-        // ===== Field private =====
-        private string _maNV;
-        private string _hoTen;
-        private decimal _luongCoBan;
-        private int _soNgayLam;
-        private int _soNgayNghiPhep;
-
-        // ===== Constructor 1: không tham số =====
-        public NhanVien()
+        static void Main(string[] args)
         {
-            _maNV = "NV000";
-            _hoTen = "Chưa đặt tên";
-            _luongCoBan = 5_000_000;
-            _soNgayLam = 26;
-            _soNgayNghiPhep = 0;
-        }
+            // ----- Nhân viên 1: constructor không tham số, rồi gán property -----
+            NhanVien nv1 = new NhanVien();
+            nv1.HoTen = "Trần Thị Bích";
+            nv1.LuongCoBan = 8_500_000;
+            nv1.SoNgayLam = 24; // nghỉ 2 ngày trong tháng
 
-        // ===== Constructor 2: chỉ nhận mã NV và họ tên =====
-        public NhanVien(string maNV, string hoTen)
-        {
-            _maNV = maNV;
-            HoTen = hoTen;          // gán qua property để validate luôn
-            _luongCoBan = 5_000_000;
-            _soNgayLam = 26;
-            _soNgayNghiPhep = 0;
-        }
+            // ----- Nhân viên 2: constructor đầy đủ tham số -----
+            NhanVien nv2 = new NhanVien(
+                maNV: "NV002",
+                hoTen: "Lê Văn Hùng",
+                luongCoBan: 12_000_000,
+                soNgayLam: 26,
+                soNgayNghiPhep: 3
+            );
 
-        // ===== Constructor 3: đầy đủ tham số =====
-        public NhanVien(string maNV, string hoTen, decimal luongCoBan, int soNgayLam, int soNgayNghiPhep)
-        {
-            _maNV = maNV;
-            HoTen = hoTen;
-            LuongCoBan = luongCoBan;
-            SoNgayLam = soNgayLam;
-            _soNgayNghiPhep = soNgayNghiPhep;
-        }
+            // ----- Nhân viên 3: constructor có Optional Parameters, dùng Named Arguments -----
+            // maNV, hoTen bắt buộc; soNgayLam truyền vào, luong lấy mặc định 5.000.000
+            NhanVien nv3 = new NhanVien(maNV: "NV003", hoTen: "Nguyễn Thị An", soNgayLam: 20);
 
-        // ===== Constructor 4: có Optional Parameters ====
-        public NhanVien(string maNV, string hoTen, decimal luong = 5_000_000, int soNgayLam = 26)
-        {
-            _maNV = maNV;
-            HoTen = hoTen;
-            LuongCoBan = luong;
-            SoNgayLam = soNgayLam;
-            _soNgayNghiPhep = 0;
-        }
+            // ----- In thông tin từng nhân viên -----
+            Console.WriteLine("--- Nhân viên 1 ---");
+            nv1.HienThiThongTin();
 
-        // ===== Property =====
+            Console.WriteLine("\n--- Nhân viên 2 ---");
+            nv2.HienThiThongTin();
 
-        // MaNV: chỉ đọc (không nằm trong yêu cầu bắt buộc nhưng cần để hiển thị/kiểm tra ở Main)
-        public string MaNV
-        {
-            get { return _maNV; }
-        }
+            Console.WriteLine("\n--- Nhân viên 3 ---");
+            nv3.HienThiThongTin();
 
-        // HoTen: đọc/ghi
-        public string HoTen
-        {
-            get { return _hoTen; }
-            set
-            {
-                if (string.IsNullOrWhiteSpace(value))
-                    throw new ArgumentException("Họ tên không được để trống.", nameof(HoTen));
-                _hoTen = value;
-            }
-        }
+            // ----- Gọi cả 3 overload TinhThuong và so sánh -----
+            Console.WriteLine("\n===== SO SÁNH TIỀN THƯỞNG (Nhân viên 2 - Lê Văn Hùng) =====");
 
-        // LuongCoBan: đọc/ghi, validate >= 0
-        public decimal LuongCoBan
-        {
-            get { return _luongCoBan; }
-            set
-            {
-                if (value < 0)
-                    throw new ArgumentOutOfRangeException(nameof(LuongCoBan), "Lương cơ bản không được âm.");
-                _luongCoBan = value;
-            }
-        }
+            decimal thuongKhongCo = nv2.TinhThuong();
+            decimal thuongTheoHeSo = nv2.TinhThuong(0.5m); // thưởng bằng 50% lương cơ bản
+            decimal thuongCoPhucLoi = nv2.TinhThuong(0.5m, true); // thêm 500.000 phúc lợi
 
-        // SoNgayLam: đọc/ghi, validate 0-31
-        public int SoNgayLam
-        {
-            get { return _soNgayLam; }
-            set
-            {
-                if (value < 0 || value > 31)
-                    throw new ArgumentOutOfRangeException(nameof(SoNgayLam), "Số ngày làm phải trong khoảng 0-31.");
-                _soNgayLam = value;
-            }
-        }
+            Console.WriteLine($"TinhThuong()                     = {thuongKhongCo:N0} VNĐ");
+            Console.WriteLine($"TinhThuong(0.5)                  = {thuongTheoHeSo:N0} VNĐ");
+            Console.WriteLine($"TinhThuong(0.5, coPhucLoi: true)  = {thuongCoPhucLoi:N0} VNĐ");
 
-        // SoNgayNghiPhep: đọc/ghi (thêm cho đầy đủ dữ liệu, không có yêu cầu validate riêng)
-        public int SoNgayNghiPhep
-        {
-            get { return _soNgayNghiPhep; }
-            set { _soNgayNghiPhep = value; }
-        }
+            // ----- Áp dụng tương tự cho nhân viên 3 để thấy sự khác biệt -----
+            Console.WriteLine("\n===== SO SÁNH TIỀN THƯỞNG (Nhân viên 3 - Nguyễn Thị An) =====");
+            Console.WriteLine($"TinhThuong()                      = {nv3.TinhThuong():N0} VNĐ");
+            Console.WriteLine($"TinhThuong(0.3)                   = {nv3.TinhThuong(0.3m):N0} VNĐ");
+            Console.WriteLine($"TinhThuong(0.3, coPhucLoi: false) = {nv3.TinhThuong(0.3m, false):N0} VNĐ");
 
-        // LuongThucNhan: chỉ đọc, tính tự động
-        // Công thức: LuongCoBan / 26 * SoNgayLam - KhauTruBHXH (8% lương cơ bản)
-        public decimal LuongThucNhan
-        {
-            get
-            {
-                decimal luongTheoNgayCong = _luongCoBan / 26m * _soNgayLam;
-                decimal khauTruBHXH = _luongCoBan * 0.08m;
-                return luongTheoNgayCong - khauTruBHXH;
-            }
-        }
-
-        // ===== 3 overload phương thức TinhThuong =====
-
-        // Không tham số -> trả về 0
-        public decimal TinhThuong()
-        {
-            return 0;
-        }
-
-        // Có hệ số -> LuongCoBan * heSo
-        public decimal TinhThuong(decimal heSo)
-        {
-            return _luongCoBan * heSo;
-        }
-
-        // Có hệ số + cờ phúc lợi -> cộng thêm 500.000 nếu coPhucLoi = true
-        public decimal TinhThuong(decimal heSo, bool coPhucLoi)
-        {
-            decimal thuong = TinhThuong(heSo);
-            if (coPhucLoi)
-                thuong += 500_000;
-            return thuong;
-        }
-
-        // ===== Hiển thị thông tin (tiện cho việc in ở Main) =====
-        public void HienThiThongTin()
-        {
-            Console.WriteLine("===== THÔNG TIN NHÂN VIÊN =====");
-            Console.WriteLine($"Mã NV        : {_maNV}");
-            Console.WriteLine($"Họ tên       : {_hoTen}");
-            Console.WriteLine($"Lương CB     : {_luongCoBan:N0} VNĐ");
-            Console.WriteLine($"Số ngày làm  : {_soNgayLam}");
-            Console.WriteLine($"Nghỉ phép    : {_soNgayNghiPhep} ngày");
-            Console.WriteLine($"Lương thực nhận: {LuongThucNhan:N0} VNĐ");
-            Console.WriteLine("================================");
-        }
-
-        public override string ToString()
-        {
-            return $"[{_maNV}] {_hoTen} - Lương thực nhận: {LuongThucNhan:N0} VNĐ";
+            Console.WriteLine("\nChương trình kết thúc.");
         }
     }
 }

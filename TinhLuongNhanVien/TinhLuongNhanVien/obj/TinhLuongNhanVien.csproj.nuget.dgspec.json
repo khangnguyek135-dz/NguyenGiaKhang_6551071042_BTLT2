@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\BTTL_Csharp\\TinhLuongNhanVien\\TinhLuongNhanVien\\TinhLuongNhanVien.csproj": {}
+    "D:\\C#\\NguyenGiaKhang_6551071042_BTLT2\\TinhLuongNhanVien\\TinhLuongNhanVien\\TinhLuongNhanVien.csproj": {}
   },
   "projects": {
-    "D:\\BTTL_Csharp\\TinhLuongNhanVien\\TinhLuongNhanVien\\TinhLuongNhanVien.csproj": {
+    "D:\\C#\\NguyenGiaKhang_6551071042_BTLT2\\TinhLuongNhanVien\\TinhLuongNhanVien\\TinhLuongNhanVien.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\BTTL_Csharp\\TinhLuongNhanVien\\TinhLuongNhanVien\\TinhLuongNhanVien.csproj",
+        "projectUniqueName": "D:\\C#\\NguyenGiaKhang_6551071042_BTLT2\\TinhLuongNhanVien\\TinhLuongNhanVien\\TinhLuongNhanVien.csproj",
         "projectName": "TinhLuongNhanVien",
-        "projectPath": "D:\\BTTL_Csharp\\TinhLuongNhanVien\\TinhLuongNhanVien\\TinhLuongNhanVien.csproj",
+        "projectPath": "D:\\C#\\NguyenGiaKhang_6551071042_BTLT2\\TinhLuongNhanVien\\TinhLuongNhanVien\\TinhLuongNhanVien.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "D:\\BTTL_Csharp\\TinhLuongNhanVien\\TinhLuongNhanVien\\obj\\",
+        "outputPath": "D:\\C#\\NguyenGiaKhang_6551071042_BTLT2\\TinhLuongNhanVien\\TinhLuongNhanVien\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

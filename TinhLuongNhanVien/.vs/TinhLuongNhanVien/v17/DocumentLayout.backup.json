@@ -1,14 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\BTTL_Csharp\\TinhLuongNhanVien\\",
+  "WorkspaceRootPath": "D:\\C#\\NguyenGiaKhang_6551071042_BTLT2\\TinhLuongNhanVien\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5F0B20B6-71B8-4F39-9C31-0368A33949CE}|TinhLuongNhanVien\\TinhLuongNhanVien.csproj|d:\\bttl_csharp\\tinhluongnhanvien\\tinhluongnhanvien\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F0B20B6-71B8-4F39-9C31-0368A33949CE}|TinhLuongNhanVien\\TinhLuongNhanVien.csproj|solutionrelative:tinhluongnhanvien\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5F0B20B6-71B8-4F39-9C31-0368A33949CE}|TinhLuongNhanVien\\TinhLuongNhanVien.csproj|d:\\c#\\nguyengiakhang_6551071042_btlt2\\tinhluongnhanvien\\tinhluongnhanvien\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F0B20B6-71B8-4F39-9C31-0368A33949CE}|TinhLuongNhanVien\\TinhLuongNhanVien.csproj|solutionrelative:tinhluongnhanvien\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5F0B20B6-71B8-4F39-9C31-0368A33949CE}|TinhLuongNhanVien\\TinhLuongNhanVien.csproj|d:\\bttl_csharp\\tinhluongnhanvien\\tinhluongnhanvien\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F0B20B6-71B8-4F39-9C31-0368A33949CE}|TinhLuongNhanVien\\TinhLuongNhanVien.csproj|solutionrelative:tinhluongnhanvien\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5F0B20B6-71B8-4F39-9C31-0368A33949CE}|TinhLuongNhanVien\\TinhLuongNhanVien.csproj|d:\\c#\\nguyengiakhang_6551071042_btlt2\\tinhluongnhanvien\\tinhluongnhanvien\\nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F0B20B6-71B8-4F39-9C31-0368A33949CE}|TinhLuongNhanVien\\TinhLuongNhanVien.csproj|solutionrelative:tinhluongnhanvien\\nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,12 +23,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "D:\\BTTL_Csharp\\TinhLuongNhanVien\\TinhLuongNhanVien\\Class1.cs",
-              "RelativeDocumentMoniker": "TinhLuongNhanVien\\Class1.cs",
-              "ToolTip": "D:\\BTTL_Csharp\\TinhLuongNhanVien\\TinhLuongNhanVien\\Class1.cs",
-              "RelativeToolTip": "TinhLuongNhanVien\\Class1.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\C#\\NguyenGiaKhang_6551071042_BTLT2\\TinhLuongNhanVien\\TinhLuongNhanVien\\Program.cs",
+              "RelativeDocumentMoniker": "TinhLuongNhanVien\\Program.cs",
+              "ToolTip": "D:\\C#\\NguyenGiaKhang_6551071042_BTLT2\\TinhLuongNhanVien\\TinhLuongNhanVien\\Program.cs",
+              "RelativeToolTip": "TinhLuongNhanVien\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-07T01:24:14.399Z",
               "EditorCaption": ""
@@ -36,12 +36,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\BTTL_Csharp\\TinhLuongNhanVien\\TinhLuongNhanVien\\Program.cs",
-              "RelativeDocumentMoniker": "TinhLuongNhanVien\\Program.cs",
-              "ToolTip": "D:\\BTTL_Csharp\\TinhLuongNhanVien\\TinhLuongNhanVien\\Program.cs",
-              "RelativeToolTip": "TinhLuongNhanVien\\Program.cs",
-              "ViewState": "AgIAAF4AAAAAAAAAAADwv2IAAAAhAAAAAAAAAA==",
+              "Title": "NhanVien.cs",
+              "DocumentMoniker": "D:\\C#\\NguyenGiaKhang_6551071042_BTLT2\\TinhLuongNhanVien\\TinhLuongNhanVien\\NhanVien.cs",
+              "RelativeDocumentMoniker": "TinhLuongNhanVien\\NhanVien.cs",
+              "ToolTip": "D:\\C#\\NguyenGiaKhang_6551071042_BTLT2\\TinhLuongNhanVien\\TinhLuongNhanVien\\NhanVien.cs",
+              "RelativeToolTip": "TinhLuongNhanVien\\NhanVien.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-07T01:22:25.346Z",
               "EditorCaption": ""
